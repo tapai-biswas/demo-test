@@ -1,0 +1,24 @@
+AWS CloudWatch Agent Installation for memory metric - Ubuntu:
+
+Create EC2 And attached IAM role(CloudWatchAgentServerPolicy)
+
+
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
+
+dpkg -i -E ./amazon-cloudwatch-agent.deb
+apt-get update && apt-get install collectd
+
+/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard  >>> for configuration
+
+/opt/aws/amazon-cloudwatch-agent/bin/config.json  >> for check configuration 
+
+/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status   >>check status
+
+/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json  >> start the agent
+
+
+ systemctl restart amazon-cloudwatch-agent
+
+
+link>> https://gauravguptacloud.medium.com/aws-cloudwatch-agent-installation-for-memory-metric-integrate-with-grafana-365404154
+

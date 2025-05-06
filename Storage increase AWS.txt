@@ -1,0 +1,11 @@
+https://docs.aws.amazon.com/ebs/latest/userguide/recognize-expanded-volume-linux.html
+
+
+sudo lsblk
+
+growpart /dev/nvme0n1 1  or growpart /dev/xvda 1
+
+lsblk
+df -hT (For Chaeck the storage)
+
+resize2fs /dev/nvme0n1p1  or resize2fs /dev/xvda1

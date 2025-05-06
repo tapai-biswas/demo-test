@@ -1,0 +1,7 @@
+timedatectl list-timezones
+
+timedatectl set-timezone Asia/Kolkata
+
+timedatectl
+
+timedatectl status

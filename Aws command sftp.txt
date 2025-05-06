@@ -1,0 +1,94 @@
+ $ git config --global user.email joydeep@shyamfuture.com - To add Email in Git Global Config File
+
+$ git config --global user.name "Joydeep Bandyopadhyayh" - To add Name in Git Global Config File
+
+$ git clone joydeep@192.168.10.70:/opt/github/wbretailapp.git - To clone a new repo you initialized on your private git server
+$ cd wbretailapp
+$ git add . - To add the changes.
+
+$ git commit -m "XXXXX" -a to commit changes
+
+ $ git push origin master - To Upload The Changed File In Git Server
+
+ $ git pull origin master - To Download The Changed File In Git Server
+
+Printer
+admin-x
+12345
+
+
+
+
+
+Match User sftp_user
+#ForceCommand internal-sftp
+PasswordAuthentication yes
+ChrootDirectory /var/www/
+PermitTunnel no
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+
+
+
+GRANT ALL ON *.* to root@'localhost' IDENTIFIED BY 'vOt1oya3huZL'; 
+
+
+
+SELECT user,plugin,host FROM mysql.user WHERE user = 'root';
+CREATE USER 'root'@'%' IDENTIFIED BY 'Shyam@#2021';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by '8S5kfukTY99QGvq';
+
+hostnamectl set-hostname wbcrmdev
+
+
+ALTER USER 'wbcrmdev'@'%' IDENTIFIED WITH mysql_native_password BY 'tVVl4OqZOWfJJ32g';
+
+CREATE USER 'scrap'@'%' IDENTIFIED WITH mysql_native_password BY 'tVVl4OqZOWfJJ32g'; 'oI2mX9sW5rK4eI3d';
+GRANT ALL PRIVILEGES ON *.* TO 'scrap'@'%' WITH GRANT OPTION;
+
+
+
+You have to edit the mysqld.cnf file and uncomment the bind-address. You can use vim to edit this, vim /etc/mysql/mysql.conf.d/mysqld.cnf.
+
+#
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+#bind-address           = 127.0.0.1
+#
+# * Fine Tuning
+#
+
+To make sure everything is good, restart mysql server.
+
+sudo service mysql restart
+
+Now, go back to TablePlus and access your database again
+
+
+
+https://www.cyberciti.biz/faq/howto-add-disk-to-lvm-volume-on-linux-to-increase-size-of-pool/
+https://help.fortinet.com/fdb/5-0-0/html/source/tasks/t_network_configuration_cli.html
+
+
+
+dd if=/mnt/pve/BiometricBKP/images/101/vm-101-disk-0.qcow2 of=~/vm-101-disk-0.raw
+
+dd if=/dev/pve/vm-101-disk-0 of=~/vm-101-disk-0.raw
+ qm importdisk 103 vm-101-disk-0.raw local-lvm
+
+
+
+192.168.25.73
+Mysql user : root
+Password : yC2iH4tY
+
+Mysql user : dev
+Password: gD5vK1uA
+
+for UP Da,
+
+sftp_user
+lPsFpWuRtYwC
+3.6.234.229
+

@@ -1,0 +1,17 @@
+systemctl stop ufw.service
+systemctl disable ufw.service
+
+nano /etc/hosts >> edit the server ip and hostname
+
+cd /home && curl -o latest -L https://securedownloads.cpanel.net/latest && sh latest 
+
+
+a:.Urb3QzE!t
+
+
+santanu.biswas@shyamsteel.com
+
+(V-ptn3G:drs
+
+
+Welcome@#123
