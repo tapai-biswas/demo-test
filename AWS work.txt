@@ -1,0 +1,99 @@
+Create SFTP user
+nano /etc/ssh/sshd_config          nano /etc/apache2/sites-available/  >> for ssl            If enything change in config file   run the command :  apachectl config test >>apache
+                                                                                                                                                      nginx -t >> nginx
+Match User sftptestuser
+ForceCommand internal-sftp
+PasswordAuthentication yes
+ChrootDirectory /var/www/html/sftptest
+PermitTunnel no
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+
+
+
+Remove Mysql 
+ service mysql status
+     service mysql stop
+     apt-get remove --purge mysql*
+     apt autoremove && apt autoclean
+     apt remove dbconfig-mysql
+     service mysql status
+
+
+
+
+Install Mysql:
+apt install mysql-server
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'e7CCZlguuiD72yE';
+Flush privileges;
+
+cnt + d
+
+mysql_secure_installation (n,n, y,y,y,y)
+
+ mysql -u root -p
+
+create database ;
+show schemas;
+
+CREATE USER 'sftevolve'@'%' IDENTIFIED WITH mysql_native_password BY 'K7aLAhHkhOHoiKP';/ password
+use mysql;
+select user from user;(to see user)
+GRANT ALL PRIVILEGES ON *.* TO 'sftevolve'@'%' WITH GRANT OPTION;
+
+\q -- to exit
+
+mysql -u root -p -- for login
+SHOW GRANTS FOR sftpanel_wonderfulwords_wp1;
+
+
+
+
+
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin (if php not working)
+
+useradd ssilgit
+usermod -aG sudo ssilgit  # to give sudo permission
+
+lsb_release -a    # check ubuntu version
+
+#Increase Volume (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)
+
+lsblk# to see the EBS volume
+
+growpart /dev/partition Name and number
+xfs_growfs -d /   (for xfs file)
+sudo resize2fs /dev/nvme0n1p1(for Ex4 file)
+
+
+
+chown -R username:group directory #chown to change ownership and chmod to change rights, use the -R option to apply the rights for all files inside of a directory too.
+
+chmod permissions filename #(ugo)(RWX/421)
+
+#PHPmyadmin block from public access(etc/apache2/sites-available/00-defaulte-site)
+
+<Directory /var/www/html/phpmyadmin>
+        #Restrict phpMyAdmin via IP address
+        Order Deny,Allow
+        Deny from All
+        allow from 125.18.13.190
+        allow from 202.191.178.219
+        allow from 59.160.211.138
+        Options FollowSymLinks
+        DirectoryIndex index.php
+</Directory>
+
+
+# PHP upgradation 
+https://www.thedataops.org/how-to-upgrade-php-version-from-8-1-to-8-2-in-ubuntu/
+
+
+
+NODEjs
+
+https://betterstack.com/community/guides/scaling-nodejs/pm2-guide/

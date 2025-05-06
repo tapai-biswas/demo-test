@@ -1,0 +1,19 @@
+Setting Up Multi-Factor Authentication on Ubuntu 22 for SSH
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install libpam-google-authenticator
+google-authenticator
+
+sudo nano /etc/pam.d/sshd >> Add bottom: auth required pam_google_authenticator.so
+
+sudo nano /etc/ssh/sshd_config  >> ChallengeResponseAuthentication yes
+
+sudo systemctl restart ssh
+
+
+PUBKEY NO
+
+User Authentication Yes
+
+
+link : https://reintech.io/blog/setting-up-multi-factor-authentication-ubuntu-22
